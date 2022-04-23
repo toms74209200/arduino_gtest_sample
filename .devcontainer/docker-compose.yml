@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  arduino:
+    build: .
+    volumes:
+      - ../:/workspace:cached
+      - ../.devcontainer/arduino-cli.yaml:/root/.arduino15/arduino-cli.yaml
+    command: /bin/sh -c "while sleep 1000; do :; done"

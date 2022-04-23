@@ -1,0 +1,16 @@
+{
+    "C_Cpp.default.includePath": [
+        "/root/.arduino15/packages/arduino/hardware/**",
+        "/root/.arduino15/packages/arduino/tools/**"
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "[cpp]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "testMate.cpp.test.advancedExecutables": [{
+        "pattern": "{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}"
+    }],
+}
