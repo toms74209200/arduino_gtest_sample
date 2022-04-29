@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <string>
+
 #include "host_uart.h"
 
 namespace host_communication {
@@ -29,6 +31,14 @@ class HostCommunication {
    * and returns false if any others
    */
   bool RecvGetCommand();
+
+  /**
+   * sends string data
+   * @param[in] Send data
+   * @return Sending result
+   * Returns true if it is succeeded
+   */
+  bool SendString(const std::string data);
 
  private:
   HostUart* host_uart_;

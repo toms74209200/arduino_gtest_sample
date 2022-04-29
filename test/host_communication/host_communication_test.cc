@@ -7,6 +7,7 @@
 #include "host_uart_mock.h"
 
 using ::testing::AtLeast;
+using ::testing::ElementsAreArray;
 using ::testing::Return;
 
 TEST(RecvTest, succeed_with_just_data) {
@@ -69,4 +70,36 @@ TEST(RecvTest, failure_with_invalid_data) {
 
   host_communication::HostCommunication host(host_uart_mock);
   EXPECT_EQ(false, host.RecvGetCommand());
+}
+
+TEST(SendTest, succeed) {
+  host_communication::HostUartMock* host_uart_mock =
+      new host_communication::HostUartMock;
+  std::string expected_data = "test";
+  auto expectedResult = true;
+  EXPECT_CALL(*host_uart_mock, SendString(ElementsAreArray(
+                                   expected_data.begin(), expected_data.end())))
+      .Times(AtLeast(1))
+      .WillRepeatedly(Return(expectedResult));
+  host_communication::HostCommunication host(host_uart_mock);
+
+  auto actualResult = host.SendString(expected_data);
+
+  EXPECT_EQ(expectedResult, actualResult);
+}
+
+TEST(SendTest, failure) {
+  host_communication::HostUartMock* host_uart_mock =
+      new host_communication::HostUartMock;
+  std::string expected_data = "test";
+  auto expectedResult = false;
+  EXPECT_CALL(*host_uart_mock, SendString(ElementsAreArray(
+                                   expected_data.begin(), expected_data.end())))
+      .Times(AtLeast(1))
+      .WillRepeatedly(Return(expectedResult));
+  host_communication::HostCommunication host(host_uart_mock);
+
+  auto actualResult = host.SendString(expected_data);
+
+  EXPECT_EQ(expectedResult, actualResult);
 }

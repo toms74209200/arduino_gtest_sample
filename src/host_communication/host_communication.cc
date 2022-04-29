@@ -36,3 +36,7 @@ bool host_communication::HostCommunication::RecvGetCommand() {
   }
   return false;
 }
+
+bool host_communication::HostCommunication::SendString(const std::string data) {
+  return this->host_uart_->SendString(data);
+}
