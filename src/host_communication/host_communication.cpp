@@ -1,5 +1,5 @@
 /**
- * @file host_communication.cc
+ * @file host_communication.cpp
  * @brief Host communication
  */
 
