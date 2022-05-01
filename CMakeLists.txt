@@ -25,4 +25,5 @@ target_include_directories(google_test PUBLIC
     src/host_communication
     src/sensor_communication
     test/host_communication
+    test/sensor_communication
 )
