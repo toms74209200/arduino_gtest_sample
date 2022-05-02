@@ -13,6 +13,8 @@ const uint8_t sensor_communication::Constants::RESPONCE_SENSOR = 0x86;
 const uint8_t sensor_communication::Constants::READ_CO2 = 0x86;
 const uint8_t sensor_communication::Constants::COMMAND_LENGTH = 9;
 
+sensor_communication::SensorCommunication::SensorCommunication(){};
+
 sensor_communication::SensorCommunication::SensorCommunication(
     sensor_communication::SensorUart* sensor_uart) {
   this->sensor_uart_ = sensor_uart;

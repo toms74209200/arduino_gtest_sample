@@ -21,6 +21,7 @@ struct Constants {
 
 class SensorCommunication {
  public:
+  SensorCommunication();
   /**
    * Constractor
    * @param[in] sensor_uart UART module
