@@ -1,6 +1,10 @@
 /**
  * @file host_uart.h
  * @brief Host UART
+ *
+ * Copyright (c) 2022 toms74209200
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
  */
 
 #pragma once

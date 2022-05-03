@@ -1,6 +1,10 @@
 /**
  * @file sensor_uart_impl.cpp
  * @brief Sensor UART implementation
+ *
+ * Copyright (c) 2022 toms74209200
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
  */
 
 #include "sensor_uart_impl.h"

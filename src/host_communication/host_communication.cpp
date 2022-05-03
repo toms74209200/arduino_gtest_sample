@@ -1,6 +1,10 @@
 /**
  * @file host_communication.cpp
  * @brief Host communication
+ *
+ * Copyright (c) 2022 toms74209200
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
  */
 
 #include "host_communication.h"
