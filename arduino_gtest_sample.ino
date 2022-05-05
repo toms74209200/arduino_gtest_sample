@@ -13,21 +13,21 @@
 #include "src/impl/sensor_uart_impl.h"
 #include "src/sensor_communication/sensor_communication.h"
 
-constexpr uint16_t HOST_BAUDRATE = 9600;
-constexpr uint16_t SENSOR_BAUDRATE = 9600;
-constexpr uint8_t SENSOR_RX_PIN = 1;
-constexpr uint8_t SENSOR_TX_PIN = 0;
+constexpr uint16_t kHostBaudrate = 9600;
+constexpr uint16_t kSensorBaudrate = 9600;
+constexpr uint8_t kSensorRxPin = 1;
+constexpr uint8_t kSensorTxPin = 0;
 
-host_communication::HostUartImpl host_uart(HOST_BAUDRATE);
+host_communication::HostUartImpl host_uart(kHostBaudrate);
 host_communication::HostCommunication host(&host_uart);
 sensor_communication::SensorUartImpl sensor_uart;
 sensor_communication::SensorCommunication sensor;
 
 void setup() {
   sensor_uart = sensor_communication::SensorUartImpl::Builder()
-                    .RxPin(SENSOR_RX_PIN)
-                    ->TxPin(SENSOR_TX_PIN)
-                    ->BaudRate(SENSOR_BAUDRATE)
+                    .RxPin(kSensorRxPin)
+                    ->TxPin(kSensorTxPin)
+                    ->BaudRate(kSensorBaudrate)
                     ->Build();
   sensor = sensor_communication::SensorCommunication(&sensor_uart);
 }

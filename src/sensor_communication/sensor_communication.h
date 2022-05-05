@@ -16,11 +16,11 @@
 namespace sensor_communication {
 
 struct Constants {
-  static const uint8_t START_BYTE;
-  static const uint8_t REQUEST_SENSOR;
-  static const uint8_t RESPONCE_SENSOR;
-  static const uint8_t READ_CO2;
-  static const uint8_t COMMAND_LENGTH;
+  static const uint8_t kStartByte;
+  static const uint8_t kRequestSensor;
+  static const uint8_t kResponceSensor;
+  static const uint8_t kReadCo2;
+  static const uint8_t kCommandLength;
 };
 
 class SensorCommunication {
